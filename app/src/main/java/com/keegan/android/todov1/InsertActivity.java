@@ -18,7 +18,7 @@ public class InsertActivity  extends AppCompatActivity {
     }
 
     public void insert( View v ) {
-        // Retrieve name and price
+        // Retrieve task
         EditText taskEditText = findViewById( R.id.input_task );
         String task = taskEditText.getText( ).toString( );
 

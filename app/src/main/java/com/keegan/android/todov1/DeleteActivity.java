@@ -16,11 +16,10 @@ import java.util.ArrayList;
 public class DeleteActivity extends AppCompatActivity {
     private DatabaseManager dbManager;
 
-    public void OnCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        dbManager = new DatabaseManager(this);
-        updateView();
+    public void onCreate( Bundle savedInstanceState ) {
+        super.onCreate( savedInstanceState );
+        dbManager = new DatabaseManager( this );
+        updateView( );
     }
 
     public void updateView()

@@ -70,20 +70,4 @@ public class DatabaseManager extends SQLiteOpenHelper {
         db.close();
         return tasks;
     }
-
-    public ToDo selectById(int id)
-    {
-        String sqlQuery = "select * from " + TABLE_TASKS;
-        sqlQuery += " where " + ID + " = " + id;
-
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(sqlQuery, null);
-
-        ToDo toDo = null;
-        if(cursor.moveToFirst())
-        {
-            toDo = new ToDo(Integer.parseInt(cursor.getString(0)), cursor.getString(1));
-        }
-        return toDo;
-    }
 }
